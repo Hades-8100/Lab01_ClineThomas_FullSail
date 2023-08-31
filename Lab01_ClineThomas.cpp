@@ -33,10 +33,11 @@ int ValidateIntInput()
     }
 
 }
-int main()
+void programone()
+//int first()
 {
-
-    std::cout << "Please enter your initials.";
+//
+   std::cout << "Please enter your initials.";
     char name[50];
     std::cin >> name;
     std::cout << "Hello " << name << " how old are you?" << std::endl;
@@ -44,10 +45,10 @@ int main()
     std::cin >> age;
     int years = age * 365;
     std::cout << name << " is " << years << " days old.";
-    return 0;
+//    return 0;
 }
-#include <iostream>
-int P2()
+void programtwo()
+
 {
         int arr[5];
         for (int i = 0; i < 5; i++) {
@@ -70,5 +71,42 @@ int P2()
         }
         std::cout << std::endl;
 
-    return 0;
+    
 }
+void programthree()
+
+{
+    int a, b, c;
+    std::cout << "Enter three numbers: ";
+    std::cin >> a >> b >> c;
+
+    int result1 = a + 1 * b + 2 - c;
+    int result2 = (a + 1) * (b + 2) - c;
+
+    std::cout << "Result 1: " << result1 << std::endl;
+    std::cout << "Result 2: " << result2 << std::endl;
+}
+int main()
+{
+    programone();
+    programtwo();
+    programthree();
+       /* return 0;*/
+}
+
+//void programone()
+//{
+//   /* int first()
+//    {*/
+//
+//        std::cout << "Please enter your initials.";
+//        char name[50];
+//        std::cin >> name;
+//        std::cout << "Hello " << name << " how old are you?" << std::endl;
+//        int age;
+//        std::cin >> age;
+//        int years = age * 365;
+//        std::cout << name << " is " << years << " days old.";
+//        
+//    /*}*/
+//}
