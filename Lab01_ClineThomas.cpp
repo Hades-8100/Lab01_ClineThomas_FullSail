@@ -2,12 +2,38 @@
 //
 
 #include <iostream>
+int ValidateIntInput()
 
+{
+
+    int input;
+
+    bool good = false;
+
+    while (true)
+
+    {
+
+        std::cout << "Input; number: ";
+
+        if (std::cin >> input)
+
+        {
+
+            good = true;
+
+        }
+
+        std::cin.clear();
+
+        std::cin.ignore(INT_MAX, '\n');
+
+        if (good) return input;
+
+    }
+
+}
 int main()
-{}
-#include <iostream>
-using namespace std;
-int P1()
 {
 
     std::cout << "Please enter your initials.";
@@ -23,5 +49,26 @@ int P1()
 #include <iostream>
 int P2()
 {
+        int arr[5];
+        for (int i = 0; i < 5; i++) {
+            bool valid = false;
+            while (!valid) {
+                std::cout << "Enter a number for slot " << i << ": ";
+                if (std::cin >> arr[i]) {
+                    valid = true;
+                }
+                else {
+                    std::cout << "Invalid input. Please enter a number." << std::endl;
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                }
+            }
+        }
+        std::cout << "The inputs are: ";
+        for (int i = 0; i < 5; i++) {
+            std::cout << arr[i] << " ";
+        }
+        std::cout << std::endl;
+
     return 0;
 }
