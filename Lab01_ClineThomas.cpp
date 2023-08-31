@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <climits>
+#include <cstring>
 using namespace std;
 //#define USHRT_MAX 32767
 
@@ -106,12 +107,47 @@ void programfour()
     cout << "unsigned int: 0 to " << UINT_MAX << endl;
     cout << "unsigned long: 0 to " << ULONG_MAX << endl;
 }
+void programfive()
+{
+    char name[32];
+    cout << "Enter your full name: ";
+    cin.getline(name, 32);
+
+    cout << "Your name is " << name << endl;
+    cout << "Did you know that last names were once used to tell what job you did?" << endl;
+}
+void programsix()
+{
+
+}
+void programseven()
+{
+
+}
+void programeight()
+{
+
+}
+void programnine()
+{
+
+}
+void programten()
+{
+
+}
 int main()
 {
     programone();
     programtwo();
     programthree();
     programfour();
+    programfive();
+    programsix();
+    programseven();
+    programeight();
+    programnine();
+    programten();
        /* return 0;*/
 }
 
