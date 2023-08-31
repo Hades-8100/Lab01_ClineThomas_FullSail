@@ -207,27 +207,91 @@ void programeight()
             cout << num << " is not evenly divisible by " << divisor << endl;
         }
     }
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
+enum PopsicleColor { RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE };
 void programnine()
 {
+    int choice;
+    cout << "Which color Popsicle™ would you like?" << endl;
+    cout << "1. Red\n2. Orange\n3. Yellow\n4. Green\n5. Blue\n6. Purple" << endl;
+    cin >> choice;
 
+    switch (choice)
+    {
+    case 1: RED:
+        cout << "You chose red! Enjoy your cherry-flavored Popsicle™." << endl;
+        break;
+    case 2 : ORANGE:
+        cout << "You chose orange! Enjoy your orange-flavored Popsicle™." << endl;
+        break;
+    case 3 : YELLOW:
+        cout << "You chose yellow! Enjoy your lemon-flavored Popsicle™." << endl;
+        break;
+    case 4 : GREEN:
+        cout << "You chose green! Enjoy your lime-flavored Popsicle™." << endl;
+        break;
+    case 5 : BLUE:
+        cout << "You chose blue! Enjoy your raspberry-flavored Popsicle™." << endl;
+        break;
+    case 6: PURPLE:
+        cout << "You chose purple! Enjoy your grape-flavored Popsicle™." << endl;
+        break;
+    default:
+        cout << "Invalid choice. Please choose a number between 1 and 6." << endl;
+    }
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
 void programten()
 {
+    int choice;
+    cout << "Which level of difficulty would you like to play?" << endl;
+    cout << "1. Easy\n2. Medium\n3. Hard" << endl;
+    cin >> choice;
 
+    srand(time(0)); // seed random number generator
+
+    int numEnemies;
+    switch (choice)
+    {
+    case 1:
+        numEnemies = rand() % 10 + 1; // generate random number between 1 and 10
+        cout << "You chose easy! There are " << numEnemies << " enemies." << endl;
+        break;
+    case 2:
+        numEnemies = rand() % 20 + 11; // generate random number between 11 and 30
+        cout << "You chose medium! There are " << numEnemies << " enemies." << endl;
+        break;
+    case 3:
+        numEnemies = rand() % 30 + 31; // generate random number between 31 and 60
+        cout << "You chose hard! There are " << numEnemies << " enemies." << endl;
+        break;
+    default:
+        cout << "Invalid choice. Please choose a number between 1 and 3." << endl;
+    }
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
 int main()
 {
-   /* programone();
+    programone();
     programtwo();
     programthree();
     programfour();
     programfive();
     programsix();
-    programseven();*/
+    programseven();
     programeight();
-    //programnine();
-    //programten();
+    programnine();
+    programten();
 }
 
 //void programone()
