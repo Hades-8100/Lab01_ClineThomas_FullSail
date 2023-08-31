@@ -2,6 +2,16 @@
 //
 
 #include <iostream>
+#include <climits>
+using namespace std;
+//#define USHRT_MAX 32767
+
+#define SHRT_MIN 0
+#define SHRT_MAX 32767
+#define INT_MIN 0
+#define INT_MAX 2147483647
+#define LONG_MIN 0
+#define LONG_MAX 9223372036854775807
 int ValidateIntInput()
 
 {
@@ -86,11 +96,22 @@ void programthree()
     std::cout << "Result 1: " << result1 << std::endl;
     std::cout << "Result 2: " << result2 << std::endl;
 }
+void programfour()
+{
+    cout << "Minimum and maximum values of integral variable types:\n";
+    cout << "short: " << SHRT_MIN << " to " << SHRT_MAX << endl;
+    cout << "int: " << INT_MIN << " to " << INT_MAX << endl;
+    cout << "long: " << LONG_MIN << " to " << LONG_MAX << endl;
+    cout << "unsigned short: 0 to " << USHRT_MAX << endl;
+    cout << "unsigned int: 0 to " << UINT_MAX << endl;
+    cout << "unsigned long: 0 to " << ULONG_MAX << endl;
+}
 int main()
 {
     programone();
     programtwo();
     programthree();
+    programfour();
        /* return 0;*/
 }
 
