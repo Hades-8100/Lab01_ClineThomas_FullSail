@@ -4,6 +4,8 @@
 #include <iostream>
 #include <climits>
 #include <cstring>
+#include <cstdlib>
+#include <conio.h>
 using namespace std;
 //#define USHRT_MAX 32767
 
@@ -44,6 +46,11 @@ int ValidateIntInput()
     }
 
 }
+//void pause()
+//{
+//    cout << pause;
+//    
+//}
 void programone()
 //int first()
 {
@@ -56,6 +63,10 @@ void programone()
     std::cin >> age;
     int years = age * 365;
     std::cout << name << " is " << years << " days old.";
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 //    return 0;
 }
 void programtwo()
@@ -82,7 +93,10 @@ void programtwo()
         }
         std::cout << std::endl;
 
-    
+        cout << "Press enter to clear the console...";
+        _getch();
+
+        system("cls");
 }
 void programthree()
 
@@ -96,6 +110,10 @@ void programthree()
 
     std::cout << "Result 1: " << result1 << std::endl;
     std::cout << "Result 2: " << result2 << std::endl;
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
 void programfour()
 {
@@ -106,19 +124,49 @@ void programfour()
     cout << "unsigned short: 0 to " << USHRT_MAX << endl;
     cout << "unsigned int: 0 to " << UINT_MAX << endl;
     cout << "unsigned long: 0 to " << ULONG_MAX << endl;
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
 void programfive()
 {
     char name[32];
     cout << "Enter your full name: ";
-    cin.getline(name, 32);
+    cin >> name;
 
     cout << "Your name is " << name << endl;
     cout << "Did you know that last names were once used to tell what job you did?" << endl;
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
 void programsix()
 {
+    int age;
+    cout << "How old are you? ";
+    cin >> age;
 
+    if (age < 16) {
+        cout << "I'm sorry, but you're too young to play this game. Bye!" << endl;
+    }
+    else if (age >= 16 && age < 25) {
+        cout << "You're still young! Enjoy your life." << endl;
+    }
+    else if (age >= 25 && age < 50) {
+        cout << "You're a quarter of a century old! Your life is slowly slipping away." << endl;
+    }
+    else if (age >= 50 && age < 100) {
+        cout << "You're getting up there in years. Better start planning for retirement!" << endl;
+    }
+    else {
+        cout << "Wow! You're over 100 years old! You must have some great stories to tell." << endl;
+    }
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
 void programseven()
 {
@@ -138,16 +186,25 @@ void programten()
 }
 int main()
 {
-    programone();
-    programtwo();
-    programthree();
-    programfour();
-    programfive();
+   // programone();
+    
+   // programtwo();
+    
+    //programthree();
+    
+  // programfour();
+    
+    //programfive();
     programsix();
-    programseven();
-    programeight();
-    programnine();
-    programten();
+    // pause();
+    //programseven();
+    // pause();
+    //programeight();
+    // pause();
+    //programnine();
+    // pause();
+    //programten();
+    //pause();
        /* return 0;*/
 }
 
