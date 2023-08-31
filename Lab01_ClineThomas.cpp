@@ -180,6 +180,10 @@ void programseven()
     else {
         cout << "Sorry, " << num << " is not an even number." << endl;
     }
+    cout << "Press enter to clear the console...";
+    _getch();
+
+    system("cls");
 }
 void programeight()
 {
@@ -195,26 +199,16 @@ void programten()
 }
 int main()
 {
-   // programone();
-    
-   // programtwo();
-    
-    //programthree();
-    
-  // programfour();
-    
-    //programfive();
-   // programsix();
-    // pause();
+    programone();
+    programtwo();
+    programthree();
+    programfour();
+    programfive();
+    programsix();
     programseven();
-    // pause();
     //programeight();
-    // pause();
     //programnine();
-    // pause();
     //programten();
-    //pause();
-       /* return 0;*/
 }
 
 //void programone()
