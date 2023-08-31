@@ -6,6 +6,7 @@
 #include <cstring>
 #include <cstdlib>
 #include <conio.h>
+#include <ctime>
 using namespace std;
 //#define USHRT_MAX 32767
 
@@ -187,7 +188,25 @@ void programseven()
 }
 void programeight()
 {
+    int divisor;
+    cout << "Enter a divisor: ";
+    cin >> divisor;
 
+    srand(time(0)); // seed random number generator
+
+    for (int i = 0; i < 3; i++)
+    {
+        int num = rand() % 100 + 1;
+        cout << "Number " << i + 1 << ": " << num << endl;
+        if (num % divisor == 0)
+        {
+            cout << num << " is evenly divisible by " << divisor << endl;
+        }
+        else
+        {
+            cout << num << " is not evenly divisible by " << divisor << endl;
+        }
+    }
 }
 void programnine()
 {
@@ -199,14 +218,14 @@ void programten()
 }
 int main()
 {
-    programone();
+   /* programone();
     programtwo();
     programthree();
     programfour();
     programfive();
     programsix();
-    programseven();
-    //programeight();
+    programseven();*/
+    programeight();
     //programnine();
     //programten();
 }
