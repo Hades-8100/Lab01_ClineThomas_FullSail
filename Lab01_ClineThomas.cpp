@@ -170,7 +170,16 @@ void programsix()
 }
 void programseven()
 {
+    int num;
+    cout << "Enter an even number: ";
+    cin >> num;
 
+    if (num % 2 == 0) {
+        cout << "Good job! " << num << " is an even number." << endl;
+    }
+    else {
+        cout << "Sorry, " << num << " is not an even number." << endl;
+    }
 }
 void programeight()
 {
@@ -195,9 +204,9 @@ int main()
   // programfour();
     
     //programfive();
-    programsix();
+   // programsix();
     // pause();
-    //programseven();
+    programseven();
     // pause();
     //programeight();
     // pause();
